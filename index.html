@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Warung Teladan — Masakan Rumahan, Rasa Istimewa. Nikmati menu nasi goreng, ayam bakar, soto ayam, dan minuman segar. Pesan langsung via WhatsApp!" />
+  <meta name="keywords" content="warung teladan, warung makan, nasi goreng, ayam bakar, soto ayam, pesan makanan, masakan rumahan" />
+  <meta name="author" content="Warung Teladan" />
+  <meta property="og:title" content="Warung Teladan — Masakan Rumahan, Rasa Istimewa" />
+  <meta property="og:description" content="Nikmati menu lezat masakan rumahan. Pesan langsung via WhatsApp!" />
+  <meta property="og:type" content="website" />
+  <title>Warung Teladan — Masakan Rumahan, Rasa Istimewa</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS (Animate on Scroll) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       NAVBAR
+  ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Menu utama">
+    <div class="container nav-container">
+      <!-- Logo -->
+      <a href="#home" class="nav-logo" aria-label="Warung Teladan - Kembali ke atas">
+        <span class="logo-icon"><i class="fa-solid fa-bowl-food"></i></span>
+        <span class="logo-text">Warung <strong>Teladan</strong></span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#home" class="nav-link active" id="nav-home">Home</a></li>
+        <li><a href="#menu" class="nav-link" id="nav-menu">Menu</a></li>
+        <li><a href="#galeri" class="nav-link" id="nav-galeri">Galeri</a></li>
+        <li><a href="#tentang" class="nav-link" id="nav-tentang">Tentang</a></li>
+        <li><a href="#kontak" class="nav-link" id="nav-kontak">Kontak</a></li>
+      </ul>
+
+      <!-- Nav CTA (desktop) -->
+      <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan"
+         target="_blank" rel="noopener noreferrer"
+         class="btn btn-wa nav-wa-btn" id="nav-wa-btn" aria-label="Pesan via WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+        <span>Pesan</span>
+      </a>
+
+      <!-- Hamburger Button -->
+      <button class="hamburger" id="hamburger" aria-label="Buka menu navigasi" aria-expanded="false" aria-controls="navLinks">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ============================================================
+       HERO SECTION
+  ============================================================ -->
+  <section class="hero" id="home" aria-label="Selamat datang di Warung Teladan">
+    <div class="hero-overlay"></div>
+    <img src="assets/images/hero/hero-bg.png" alt="Suasana Warung Teladan dengan berbagai menu lezat" class="hero-img" />
+
+    <div class="container hero-content">
+      <div class="hero-text" data-aos="fade-right" data-aos-duration="800">
+        <span class="hero-badge">🍽️ Masakan Rumahan</span>
+        <h1 class="hero-title">Warung<br /><span class="text-accent">Teladan</span></h1>
+        <p class="hero-tagline">Masakan Rumahan, Rasa Istimewa</p>
+        <p class="hero-desc">Menu lezat dengan bahan-bahan segar pilihan. Cocok untuk makan siang dan malam bersama keluarga.</p>
+        <div class="hero-cta-group">
+          <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary btn-cta" id="hero-wa-btn"
+             aria-label="Pesan via WhatsApp sekarang">
+            <i class="fa-brands fa-whatsapp"></i>
+            Pesan via WhatsApp
+          </a>
+          <a href="#menu" class="btn btn-outline btn-cta" id="hero-menu-btn"
+             aria-label="Lihat menu kami">
+            <i class="fa-solid fa-utensils"></i>
+            Lihat Menu
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Tahun Berdiri</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">1000+</span>
+            <span class="stat-label">Pelanggan Puas</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat-item">
+            <span class="stat-num">10+</span>
+            <span class="stat-label">Menu Pilihan</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-image-wrap" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
+        <div class="hero-image-ring">
+          <img src="assets/images/galeri/galeri-1.png" alt="Sajian makanan lezat Warung Teladan" class="hero-food-img" />
+        </div>
+        <div class="hero-badge-float hero-badge-float--1">
+          <i class="fa-solid fa-fire-flame-curved"></i>
+          <span>Terlaris!</span>
+        </div>
+        <div class="hero-badge-float hero-badge-float--2">
+          <i class="fa-solid fa-star"></i>
+          <span>Rating 4.9</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scroll hint -->
+    <a href="#menu" class="scroll-hint" aria-label="Gulir ke bawah">
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- ============================================================
+       MENU SECTION
+  ============================================================ -->
+  <section class="section section--light" id="menu" aria-label="Menu Warung Teladan">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">🍜 Menu Kami</span>
+        <h2 class="section-title">Pilihan Menu <span class="text-accent">Lezat</span></h2>
+        <p class="section-desc">Semua menu dimasak segar setiap hari dengan bahan-bahan berkualitas pilihan.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="menu-filter" data-aos="fade-up" data-aos-delay="100" role="tablist" aria-label="Filter kategori menu">
+        <button class="filter-btn active" data-filter="all" id="filter-all" role="tab" aria-selected="true">Semua</button>
+        <button class="filter-btn" data-filter="makanan" id="filter-makanan" role="tab" aria-selected="false">🍛 Makanan</button>
+        <button class="filter-btn" data-filter="minuman" id="filter-minuman" role="tab" aria-selected="false">🥤 Minuman</button>
+      </div>
+
+      <!-- Menu Grid -->
+      <div class="menu-grid" id="menuGrid" role="tabpanel" aria-label="Daftar menu">
+
+        <!-- Nasi Goreng Spesial -->
+        <article class="menu-card" data-category="makanan" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-card__img-wrap">
+            <img src="assets/images/menu/nasi-goreng.png" alt="Nasi Goreng Spesial Warung Teladan" class="menu-card__img" loading="lazy" />
+            <span class="menu-card__badge badge--hot">🔥 Terlaris</span>
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Makanan Utama</div>
+            <h3 class="menu-card__name">Nasi Goreng Spesial</h3>
+            <p class="menu-card__desc">Nasi goreng gurih dengan telur mata sapi, ayam suwir, dan sayuran segar. Disajikan dengan kerupuk dan acar.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">Rp 20.000</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan%20Nasi%20Goreng%20Spesial"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-wa btn-sm menu-wa-btn" id="menu-wa-nasi-goreng"
+                 aria-label="Pesan Nasi Goreng Spesial via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Pesan
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Ayam Bakar Teladan -->
+        <article class="menu-card" data-category="makanan" data-aos="fade-up" data-aos-delay="100">
+          <div class="menu-card__img-wrap">
+            <img src="assets/images/menu/ayam-bakar.png" alt="Ayam Bakar Teladan khas Warung Teladan" class="menu-card__img" loading="lazy" />
+            <span class="menu-card__badge badge--new">⭐ Favorit</span>
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Makanan Utama</div>
+            <h3 class="menu-card__name">Ayam Bakar Teladan</h3>
+            <p class="menu-card__desc">Ayam kampung pilihan dibakar dengan bumbu kecap spesial rumahan. Empuk, juicy, dan penuh cita rasa.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">Rp 25.000</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan%20Ayam%20Bakar%20Teladan"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-wa btn-sm menu-wa-btn" id="menu-wa-ayam-bakar"
+                 aria-label="Pesan Ayam Bakar Teladan via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Pesan
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Soto Ayam -->
+        <article class="menu-card" data-category="makanan" data-aos="fade-up" data-aos-delay="200">
+          <div class="menu-card__img-wrap">
+            <img src="assets/images/menu/soto-ayam.png" alt="Soto Ayam kuah bening khas Warung Teladan" class="menu-card__img" loading="lazy" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Makanan Utama</div>
+            <h3 class="menu-card__name">Soto Ayam</h3>
+            <p class="menu-card__desc">Soto kuah bening kunyit dengan ayam suwir, mie soun, telur rebus, dan taburan bawang goreng renyah.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">Rp 18.000</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan%20Soto%20Ayam"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-wa btn-sm menu-wa-btn" id="menu-wa-soto-ayam"
+                 aria-label="Pesan Soto Ayam via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Pesan
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Es Teh Manis -->
+        <article class="menu-card" data-category="minuman" data-aos="fade-up" data-aos-delay="0">
+          <div class="menu-card__img-wrap">
+            <img src="assets/images/menu/minuman.png" alt="Es Teh Manis dan Es Jeruk Warung Teladan" class="menu-card__img" loading="lazy" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Minuman</div>
+            <h3 class="menu-card__name">Es Teh Manis</h3>
+            <p class="menu-card__desc">Teh manis segar yang diseduh dari teh pilihan, disajikan dingin dengan es batu. Segar dan menyegarkan.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">Rp 5.000</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan%20Es%20Teh%20Manis"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-wa btn-sm menu-wa-btn" id="menu-wa-es-teh"
+                 aria-label="Pesan Es Teh Manis via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Pesan
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Es Jeruk -->
+        <article class="menu-card" data-category="minuman" data-aos="fade-up" data-aos-delay="100">
+          <div class="menu-card__img-wrap">
+            <img src="assets/images/menu/minuman.png" alt="Es Jeruk segar Warung Teladan" class="menu-card__img" loading="lazy" style="object-position: right center;" />
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Minuman</div>
+            <h3 class="menu-card__name">Es Jeruk</h3>
+            <p class="menu-card__desc">Perasan jeruk segar asli tanpa pengawet, manis alami dan menyegarkan. Sempurna menemani makanan berat.</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price">Rp 7.000</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan%20Es%20Jeruk"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-wa btn-sm menu-wa-btn" id="menu-wa-es-jeruk"
+                 aria-label="Pesan Es Jeruk via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Pesan
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Air Putih / Placeholder -->
+        <article class="menu-card" data-category="minuman" data-aos="fade-up" data-aos-delay="200">
+          <div class="menu-card__img-wrap menu-card__img-wrap--placeholder">
+            <div class="menu-placeholder-img">
+              <i class="fa-solid fa-mug-hot"></i>
+            </div>
+            <span class="menu-card__badge badge--soon">🆕 Segera</span>
+          </div>
+          <div class="menu-card__body">
+            <div class="menu-card__category">Minuman</div>
+            <h3 class="menu-card__name">Menu Baru</h3>
+            <p class="menu-card__desc">Menu minuman spesial baru kami akan segera hadir. Pantau terus atau tanyakan langsung via WhatsApp!</p>
+            <div class="menu-card__footer">
+              <span class="menu-card__price" style="color: var(--neutral-gray); font-size: 0.9rem;">Segera Hadir</span>
+              <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20ada%20menu%20minuman%20baru%20apa%3F"
+                 target="_blank" rel="noopener noreferrer"
+                 class="btn btn-outline btn-sm" id="menu-wa-new"
+                 aria-label="Tanya menu baru via WhatsApp">
+                <i class="fa-brands fa-whatsapp"></i> Tanya
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /.menu-grid -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       GALERI SECTION
+  ============================================================ -->
+  <section class="section" id="galeri" aria-label="Galeri Warung Teladan">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">📸 Galeri</span>
+        <h2 class="section-title">Sajian <span class="text-accent">Istimewa</span></h2>
+        <p class="section-desc">Setiap hidangan dibuat dengan penuh cinta dan dedikasi untuk kepuasan Anda.</p>
+      </div>
+
+      <div class="galeri-grid">
+        <div class="galeri-item galeri-item--large" data-aos="fade-up" data-aos-delay="0">
+          <img src="assets/images/galeri/galeri-1.png" alt="Sajian lengkap menu Warung Teladan" class="galeri-img" loading="lazy" />
+          <div class="galeri-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="galeri-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="assets/images/menu/nasi-goreng.png" alt="Nasi Goreng Spesial Warung Teladan" class="galeri-img" loading="lazy" />
+          <div class="galeri-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="galeri-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="assets/images/menu/ayam-bakar.png" alt="Ayam Bakar Teladan khas warung kami" class="galeri-img" loading="lazy" />
+          <div class="galeri-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="galeri-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="assets/images/menu/soto-ayam.png" alt="Soto Ayam kuah bening segar" class="galeri-img" loading="lazy" />
+          <div class="galeri-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+        <div class="galeri-item" data-aos="fade-up" data-aos-delay="250">
+          <img src="assets/images/menu/minuman.png" alt="Es Teh Manis dan Es Jeruk segar" class="galeri-img" loading="lazy" />
+          <div class="galeri-overlay">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Tampilan foto besar">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Tutup galeri">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt="Foto galeri Warung Teladan diperbesar" />
+  </div>
+
+  <!-- ============================================================
+       TENTANG KAMI SECTION
+  ============================================================ -->
+  <section class="section section--light" id="tentang" aria-label="Tentang Warung Teladan">
+    <div class="container">
+      <div class="tentang-wrap">
+        <div class="tentang-visual" data-aos="fade-right">
+          <div class="tentang-img-stack">
+            <img src="assets/images/menu/ayam-bakar.png" alt="Ayam bakar khas Warung Teladan" class="tentang-img tentang-img--main" loading="lazy" />
+            <img src="assets/images/menu/nasi-goreng.png" alt="Nasi goreng spesial" class="tentang-img tentang-img--secondary" loading="lazy" />
+          </div>
+          <div class="tentang-years-badge">
+            <span class="years-num">5+</span>
+            <span class="years-label">Tahun<br/>Melayani</span>
+          </div>
+        </div>
+
+        <div class="tentang-text" data-aos="fade-left">
+          <span class="section-badge">🏠 Tentang Kami</span>
+          <h2 class="section-title">Cita Rasa <span class="text-accent">Rumahan</span> yang<br/>Selalu Dirindukan</h2>
+          <p class="tentang-desc">Warung Teladan berdiri dengan satu misi sederhana: menyajikan masakan rumahan yang lezat, bersih, dan terjangkau untuk semua kalangan.</p>
+          <p class="tentang-desc">Dengan pengalaman lebih dari 5 tahun melayani ribuan pelanggan setia, kami terus berkomitmen untuk menggunakan bahan-bahan segar pilihan setiap harinya.</p>
+
+          <div class="tentang-values">
+            <div class="value-item">
+              <span class="value-icon"><i class="fa-solid fa-leaf"></i></span>
+              <div>
+                <strong>Bahan Segar</strong>
+                <p>Dimasak fresh setiap hari</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon"><i class="fa-solid fa-heart"></i></span>
+              <div>
+                <strong>Penuh Kasih</strong>
+                <p>Dimasak dengan sepenuh hati</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <span class="value-icon"><i class="fa-solid fa-tag"></i></span>
+              <div>
+                <strong>Harga Terjangkau</strong>
+                <p>Enak tanpa menguras kantong</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20mengetahui%20lebih%20lanjut"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-primary" id="tentang-wa-btn"
+             aria-label="Hubungi kami via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            Hubungi Kami
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       TESTIMONI SECTION
+  ============================================================ -->
+  <section class="section" id="testimoni" aria-label="Testimoni pelanggan Warung Teladan">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge">💬 Testimoni</span>
+        <h2 class="section-title">Kata Pelanggan <span class="text-accent">Kami</span></h2>
+        <p class="section-desc">Kepuasan pelanggan adalah prioritas utama kami.</p>
+      </div>
+
+      <div class="testimoni-grid">
+        <div class="testimoni-card" data-aos="fade-up" data-aos-delay="0">
+          <div class="testimoni-stars" aria-label="Rating 5 bintang">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimoni-text">"Nasi gorengnya enak banget! Bumbunya meresap sempurna. Sudah langganan hampir 3 tahun, rasa konsisten selalu enak."</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar">B</div>
+            <div>
+              <strong>Budi S.</strong>
+              <span>Pelanggan Setia</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimoni-card" data-aos="fade-up" data-aos-delay="100">
+          <div class="testimoni-stars" aria-label="Rating 5 bintang">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimoni-text">"Ayam bakarnya favorit banget! Bumbunya khas, dagingnya empuk. Harganya juga terjangkau banget untuk rasa sepremium ini."</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar">S</div>
+            <div>
+              <strong>Siti R.</strong>
+              <span>Pelanggan Tetap</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimoni-card" data-aos="fade-up" data-aos-delay="200">
+          <div class="testimoni-stars" aria-label="Rating 5 bintang">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="testimoni-text">"Pelayanannya ramah, makanannya enak, tempatnya bersih. Pesan via WhatsApp juga gampang banget, langsung direspons!"</p>
+          <div class="testimoni-author">
+            <div class="testimoni-avatar">A</div>
+            <div>
+              <strong>Ahmad F.</strong>
+              <span>Pelanggan Baru</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       KONTAK SECTION
+  ============================================================ -->
+  <section class="section section--dark" id="kontak" aria-label="Kontak dan lokasi Warung Teladan">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-badge section-badge--light">📍 Kontak & Lokasi</span>
+        <h2 class="section-title section-title--light">Temukan <span class="text-accent">Kami</span></h2>
+        <p class="section-desc section-desc--light">Kami siap melayani Anda setiap hari. Yuk, kunjungi atau pesan sekarang!</p>
+      </div>
+
+      <div class="kontak-wrap">
+        <!-- Info Kontak -->
+        <div class="kontak-info" data-aos="fade-right">
+          <div class="kontak-item">
+            <div class="kontak-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+            <div>
+              <strong>Alamat</strong>
+              <p>Jl. Contoh No. 1, Kelurahan Contoh,<br/>Kota [Nama Kota], [Provinsi]</p>
+            </div>
+          </div>
+          <div class="kontak-item">
+            <div class="kontak-icon" aria-hidden="true"><i class="fa-solid fa-clock"></i></div>
+            <div>
+              <strong>Jam Buka</strong>
+              <p>Setiap Hari<br/>08.00 – 21.00 WIB</p>
+            </div>
+          </div>
+          <div class="kontak-item">
+            <div class="kontak-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></div>
+            <div>
+              <strong>WhatsApp</strong>
+              <p>+62 123 456 789</p>
+            </div>
+          </div>
+          <div class="kontak-item">
+            <div class="kontak-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+            <div>
+              <strong>Email</strong>
+              <p>info@warungteladan.id</p>
+            </div>
+          </div>
+
+          <!-- Big CTA -->
+          <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan"
+             target="_blank" rel="noopener noreferrer"
+             class="btn btn-wa btn-lg kontak-cta-btn" id="kontak-wa-btn"
+             aria-label="Pesan sekarang via WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+            Pesan Sekarang via WhatsApp
+          </a>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="kontak-map" data-aos="fade-left">
+          <div class="map-placeholder" role="img" aria-label="Peta lokasi Warung Teladan">
+            <div class="map-pin">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <p class="map-label">Warung Teladan</p>
+            <p class="map-sublabel">Jl. Contoh No. 1, [Kota]</p>
+            <a href="https://maps.google.com/?q=Warung+Teladan" target="_blank" rel="noopener noreferrer"
+               class="btn btn-outline btn-map" id="map-open-btn"
+               aria-label="Buka Google Maps untuk lokasi Warung Teladan">
+              <i class="fa-solid fa-map"></i>
+              Buka Google Maps
+            </a>
+            <p class="map-note">*(Ganti dengan embed Google Maps asli saat go-live)*</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#home" class="nav-logo footer-logo" aria-label="Warung Teladan">
+          <span class="logo-icon"><i class="fa-solid fa-bowl-food"></i></span>
+          <span class="logo-text">Warung <strong>Teladan</strong></span>
+        </a>
+        <p class="footer-tagline">Masakan Rumahan, Rasa Istimewa.</p>
+        <div class="footer-social" aria-label="Media sosial Warung Teladan">
+          <a href="#" class="social-link" aria-label="Instagram Warung Teladan" id="footer-instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+          <a href="#" class="social-link" aria-label="Facebook Warung Teladan" id="footer-facebook">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="https://wa.me/62123456789" target="_blank" rel="noopener noreferrer"
+             class="social-link social-link--wa" aria-label="WhatsApp Warung Teladan" id="footer-wa">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Navigasi</h4>
+        <ul role="list">
+          <li><a href="#home" id="footer-nav-home">Home</a></li>
+          <li><a href="#menu" id="footer-nav-menu">Menu</a></li>
+          <li><a href="#galeri" id="footer-nav-galeri">Galeri</a></li>
+          <li><a href="#tentang" id="footer-nav-tentang">Tentang Kami</a></li>
+          <li><a href="#kontak" id="footer-nav-kontak">Kontak</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Menu Populer</h4>
+        <ul role="list">
+          <li><a href="#menu" id="footer-menu-nasi">Nasi Goreng Spesial</a></li>
+          <li><a href="#menu" id="footer-menu-ayam">Ayam Bakar Teladan</a></li>
+          <li><a href="#menu" id="footer-menu-soto">Soto Ayam</a></li>
+          <li><a href="#menu" id="footer-menu-teh">Es Teh Manis</a></li>
+          <li><a href="#menu" id="footer-menu-jeruk">Es Jeruk</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4 class="footer-heading">Info</h4>
+        <ul role="list">
+          <li><i class="fa-solid fa-clock" aria-hidden="true"></i> Buka: 08.00 – 21.00</li>
+          <li><i class="fa-solid fa-calendar" aria-hidden="true"></i> Setiap Hari</li>
+          <li><i class="fa-solid fa-location-dot" aria-hidden="true"></i> Jl. Contoh No. 1</li>
+          <li><i class="fa-solid fa-phone" aria-hidden="true"></i> +62 123 456 789</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="footerYear"></span> Warung Teladan. Semua hak dilindungi.</p>
+      <p>Dibuat dengan <i class="fa-solid fa-heart" style="color: var(--primary)" aria-label="cinta"></i> untuk melayani Anda.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a href="https://wa.me/62123456789?text=Halo%20Warung%20Teladan%2C%20saya%20ingin%20memesan"
+     target="_blank" rel="noopener noreferrer"
+     class="floating-wa" id="floatingWa"
+     aria-label="Pesan via WhatsApp — tombol mengambang">
+    <i class="fa-brands fa-whatsapp"></i>
+    <span class="floating-wa__tooltip">Pesan Sekarang!</span>
+  </a>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas halaman">
+    <i class="fa-solid fa-chevron-up"></i>
+  </button>
+
+  <!-- AOS JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
