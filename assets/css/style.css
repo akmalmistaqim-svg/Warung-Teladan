@@ -1036,6 +1036,7 @@ button {
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--sp-lg);
+  padding-top: var(--sp-xl); /* ruang agar kartu bisa naik saat hover */
 }
 
 @media (min-width: 640px) { .testimoni-grid { grid-template-columns: repeat(2, 1fr); } }
@@ -1050,9 +1051,8 @@ button {
   flex-direction: column;
   gap: var(--sp-md);
   box-shadow: var(--shadow-sm);
-  transition: all 0.3s var(--ease);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
   position: relative;
-  overflow: hidden;
 }
 
 .testimoni-card::before {
@@ -1068,10 +1068,13 @@ button {
   pointer-events: none;
 }
 
-.testimoni-card:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--primary-light);
+/* Hover hanya aktif di device dengan pointer/mouse, tidak mengganggu tap mobile */
+@media (hover: hover) and (pointer: fine) {
+  .testimoni-card:hover {
+    transform: translateY(-28px);
+    box-shadow: 0 32px 64px rgba(0, 0, 0, 0.22), 0 10px 28px rgba(249, 115, 22, 0.20);
+    border-color: var(--primary-light);
+  }
 }
 
 .testimoni-stars {
@@ -1324,15 +1327,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
+  gap: 8px;
   text-align: center;
   padding-block: var(--sp-lg);
   font-size: 0.78rem;
   color: rgba(255,255,255,0.35);
-}
-
-@media (min-width: 640px) {
-  .footer-bottom { flex-direction: row; justify-content: space-between; }
 }
 
 /* ============================================================
