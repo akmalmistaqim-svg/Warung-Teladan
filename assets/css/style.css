@@ -68,6 +68,8 @@ html {
   scroll-behavior: smooth;
   font-size: 16px;
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 body {
@@ -75,7 +77,10 @@ body {
   color: var(--neutral-dark);
   background-color: var(--white);
   line-height: 1.6;
+  position: relative;
+  width: 100%;
   overflow-x: hidden;
+  overscroll-behavior-x: none;
 }
 
 img {
@@ -265,7 +270,9 @@ button {
   right: 0;
   z-index: 1000;
   padding-block: 20px;
-  transition: all 0.35s var(--ease);
+  transition: background 0.35s var(--ease), padding-block 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  transform: translateZ(0);
+  will-change: transform;
 }
 
 .navbar.scrolled {

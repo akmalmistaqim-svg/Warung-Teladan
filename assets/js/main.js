@@ -7,6 +7,29 @@
 'use strict';
 
 /* ============================================================
+   0. SCROLL POSITION RESET — Fix mobile refresh glitch
+   Some mobile browsers restore an old scroll position from
+   cache (bfcache) before layout settles on reload, making the
+   page appear shifted sideways until the user scrolls manually.
+   Forcing scroll back to (0,0) on every load/show avoids this.
+============================================================ */
+(function resetScrollPosition() {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  function reset() {
+    window.scrollTo(0, 0);
+    document.documentElement.scrollLeft = 0;
+    document.body.scrollLeft = 0;
+  }
+
+  reset();
+  window.addEventListener('pageshow', reset);
+  window.addEventListener('load', reset);
+})();
+
+/* ============================================================
    1. AOS (Animate on Scroll) — Initialize
 ============================================================ */
 AOS.init({
@@ -15,6 +38,37 @@ AOS.init({
   once: true,
   offset: 60,
 });
+
+/* ------------------------------------------------------------
+   1b. AOS REFRESH — Recalculate trigger positions once images
+   finish loading. On mobile (slower connections), images are
+   often still loading when AOS.init() first runs, so the
+   calculated trigger offsets end up wrong.
+------------------------------------------------------------ */
+(function refreshAosAfterImagesLoad() {
+  function refresh() {
+    if (typeof AOS !== 'undefined') AOS.refreshHard();
+  }
+  window.addEventListener('load', refresh);
+  document.querySelectorAll('img').forEach(img => {
+    if (!img.complete) img.addEventListener('load', refresh, { once: true });
+  });
+})();
+
+/* ------------------------------------------------------------
+   1c. AOS HARD GUARANTEE — Content must never stay invisible.
+   Force-reveal every [data-aos] element shortly after the page
+   loads if it hasn't animated in on its own yet.
+------------------------------------------------------------ */
+(function forceRevealAos() {
+  function reveal() {
+    document.querySelectorAll('[data-aos]:not(.aos-animate)').forEach(el => {
+      el.classList.add('aos-animate');
+    });
+  }
+  window.addEventListener('load', () => setTimeout(reveal, 1500));
+  setTimeout(reveal, 4000);
+})();
 
 /* ============================================================
    2. NAVBAR — Scroll behavior & active link highlight
@@ -49,7 +103,16 @@ AOS.init({
     });
   }
 
-  window.addEventListener('scroll', onScroll, { passive: true });
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        onScroll();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
   onScroll(); // Run on load
 })();
 
@@ -216,8 +279,15 @@ AOS.init({
   const btn = document.getElementById('backToTop');
   if (!btn) return;
 
+  let btnTicking = false;
   window.addEventListener('scroll', () => {
-    btn.classList.toggle('visible', window.scrollY > 400);
+    if (!btnTicking) {
+      window.requestAnimationFrame(() => {
+        btn.classList.toggle('visible', window.scrollY > 400);
+        btnTicking = false;
+      });
+      btnTicking = true;
+    }
   }, { passive: true });
 
   btn.addEventListener('click', () => {
@@ -262,11 +332,18 @@ AOS.init({
     navbar.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%)';
   }
 
+  let transTicking = false;
   window.addEventListener('scroll', () => {
-    if (window.scrollY <= 80) {
-      navbar.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%)';
-    } else {
-      navbar.style.background = '';
+    if (!transTicking) {
+      window.requestAnimationFrame(() => {
+        if (window.scrollY <= 80) {
+          navbar.style.background = 'linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 100%)';
+        } else {
+          navbar.style.background = '';
+        }
+        transTicking = false;
+      });
+      transTicking = true;
     }
   }, { passive: true });
 })();
